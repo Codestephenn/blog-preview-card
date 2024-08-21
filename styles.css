@@ -1,0 +1,138 @@
+/* CSS Variables */
+:root {
+  --bg-color: hsl(47, 88%, 63%);
+  --font-color: hsl(0, 0%, 7%);
+  --font-secondary-color: hsl(0, 0%, 42%);
+  --card-bg-color: hsl(0, 0%, 100%);
+  --card-shadow-color: hsl(0, 0%, 7%);
+  --btn-bg-color: hsl(47, 88%, 63%);
+  --hover-color: hsl(47, 88%, 50%);
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+  font-family: 'Figtree', sans-serif;
+
+  /* Flexbox centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Blog Preview Card Styles */
+.blog-preview-card {
+  display: flex;
+  flex-direction: column;
+  width: 275px; /* Adjusted width */
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--card-bg-color);
+  box-shadow: 8px 8px 0 0 var(--card-shadow-color);
+  border: 1px solid var(--card-shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Blog Preview Card */
+.blog-preview-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 0 0 var(--card-shadow-color);
+}
+
+/* Blog Preview Card Text */
+.blog-preview-card p {
+  font-size: 13px;
+  color: var(--font-secondary-color);
+  margin: 0;
+  line-height: 150%; 
+  width: 100%;
+  padding: 0;
+  font-weight: 500;
+}
+
+/* Call to Action Button */
+.CTA-btn {
+  border: none;
+  padding: 5px 10px;
+  font-weight: 500;
+  background: var(--btn-bg-color);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Blog Preview Card Heading */
+.blog-preview-card h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--font-color);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.blog-preview-card h2:hover {
+  color: var(--bg-color);
+}
+
+/* Published Date */
+.blog-preview-card .published-date {
+  font-size: 10px;
+  color: var(--font-color);
+  font-weight: 800;
+}
+
+/* Blog Preview Card Image */
+.blog-preview-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Author Info Container */
+.author-info {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+/* Author Name Container */
+.author-name-ctn {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+/* Author Name */
+#author-name {
+  color: var(--font-color);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Author Avatar Container */
+.author-avartar-ctn {
+  width: 30px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+/* Visually Hidden Elements (Accessibility) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Attribution Section */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
