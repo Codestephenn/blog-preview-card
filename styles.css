@@ -7,14 +7,13 @@
   --card-shadow-color: hsl(0, 0%, 7%);
   --btn-bg-color: hsl(47, 88%, 63%);
   --hover-color: hsl(47, 88%, 50%);
+  --focus-color: hsl(47, 88%, 40%);
 }
 
 /* Global Styles */
 body {
   background-color: var(--bg-color);
-  font-family: 'Figtree', sans-serif;
-
-  /* Flexbox centering */
+  font-family: 'Figtree', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +26,7 @@ body {
 .blog-preview-card {
   display: flex;
   flex-direction: column;
-  width: 275px; /* Adjusted width */
+  width: 275px;
   padding: 20px;
   border-radius: 20px;
   background: var(--card-bg-color);
@@ -62,6 +61,17 @@ body {
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.CTA-btn:hover, .CTA-btn:focus {
+  background: var(--hover-color);
+  outline: none;
+}
+
+.CTA-btn:focus {
+  box-shadow: 0 0 0 4px var(--focus-color);
 }
 
 /* Blog Preview Card Heading */
@@ -74,8 +84,9 @@ body {
   line-height: 1.3;
 }
 
-.blog-preview-card h2:hover {
+.blog-preview-card h2:hover, .blog-preview-card h2:focus {
   color: var(--bg-color);
+  outline: none;
 }
 
 /* Published Date */
@@ -135,4 +146,53 @@ body {
   font-size: 11px;
   text-align: center;
   margin-top: 100px;
+}
+
+
+/* Media Query for Large Screens */
+@media (min-width: 1024px) {
+  body {
+    padding: 50px; /* Add some padding around the main content */
+  }
+
+  .blog-preview-card {
+    width: 400px; /* Increase the width of the card */
+    padding: 30px; /* Increase padding inside the card */
+    box-shadow: 10px 10px 0 0 var(--card-shadow-color); /* Slightly more prominent shadow */
+  }
+
+  .blog-preview-card h2 {
+    font-size: 1.5rem; /* Increase heading size */
+  }
+
+  .blog-preview-card p {
+    font-size: 15px; /* Increase paragraph font size */
+  }
+
+  .CTA-btn {
+    padding: 10px 20px; /* Increase button padding */
+    font-size: 1rem; /* Increase button text size */
+  }
+
+  .author-avartar-ctn {
+    width: 40px; /* Increase avatar size */
+  }
+
+  #author-name {
+    font-size: 16px; /* Increase author name font size */
+  }
+}
+
+/* Multi-Column Layout for Extra Large Screens */
+@media (min-width: 1440px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+  }
+
+  .blog-preview-card {
+    width: 300px; /* Adjust card width to fit more cards on the screen */
+  }
 }

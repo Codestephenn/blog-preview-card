@@ -2,53 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper display on user's device -->
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
-  <!-- Local Fonts -->
-  <style>
-    @font-face {
-      font-family: 'Figtree';
-      src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype'),
-           url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
-      font-weight: 100 900;
-      font-style: normal, italic;
-    }
-  </style>
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A blog preview card highlighting HTML & CSS foundations">
   
-  <title>Frontend Mentor | Blog preview card</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
 
-  <!-- Additional Styles -->
+  <title>Frontend Mentor | Blog preview card</title>
 </head>
 <body>
   <main>
     <h1 class="visually-hidden">Blog preview card</h1>
 
-    <!-- Blog Preview Card -->
-    <div class="blog-preview-card">
-      <img src="assets/images/illustration-article.svg" alt="Article Illustration">
+    <div class="blog-preview-card" aria-label="HTML & CSS foundations article preview">
+      <img src="assets/images/illustration-article.svg" alt="Illustration of article about HTML & CSS foundations" loading="lazy">
       <div class="CTA-btn-ctn">
-        <button class="CTA-btn">Learning</button>
+        <button class="CTA-btn" aria-label="Learn more about HTML & CSS foundations">Learning</button>
       </div>
 
-      <!-- Published Date -->
       <p class="published-date">Published 21 Aug 2024</p>
-
-      <!-- Article Title -->
       <h2>HTML & CSS foundations</h2>
-
-      <!-- Article Description -->
       <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
 
-      <!-- Author Information -->
       <div class="author-info">
         <div class="author-avartar-ctn">
-          <img src="assets/images/author-avatar.webp" alt="Author Avatar" class="author-avartar">
+          <img src="assets/images/author-avatar.webp" alt="Author Stephen A" class="author-avatar">
         </div>
         <div class="author-name-ctn">
           <p id="author-name">Stephen A</p>
@@ -57,11 +35,10 @@
     </div>
   </main>
 
-  <!-- Footer Attribution -->
   <footer>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Codestephenn" target="_blank">StephenA</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Codestephenn" target="_blank" rel="noopener">StephenA</a>.
     </div>
   </footer>
 </body>
